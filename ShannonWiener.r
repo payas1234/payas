@@ -1,6 +1,6 @@
 library(data.table)
 
-ShannonWiener <- function(filePath) {
+ShannonWiener <- function(filePath = file.choose() ) {
   twforest <- fread(filePath)
   # 計算總物種數
   S <- twforest[, sum(individuals) ]
